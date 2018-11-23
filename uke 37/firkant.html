@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Firkant xd</title>
+    <style>
+        #firkant {
+            height: 300px;
+            width: 300px;
+            font-size: 40px;
+            border-radius: 50%;
+
+        }
+
+        h1  {
+            margin-left: 300px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Mom Gay</h1>
+
+    <img id="firkant" src="41117006_346626485880560_3477206862871396352_n.jpg"></img>
+
+    <script>
+        var firkant = document.getElementById("firkant");
+
+        document.onmousemove = function () {
+            var x = event.clientX - 150;
+            var y = event.clientY - 150;
+            console.log("x=" + x);
+            console.log("y=" + y);
+
+            firkant.style.marginLeft = x + "px";
+            firkant.style.marginTop = y + "px";
+        }
+
+    </script>
+
+</body>
+</html>

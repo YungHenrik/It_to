@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+
+<script>
+    function abc(a,b,c) {
+        var rot = b*b - 4*a*c;
+        if (rot < 0 ) {
+            console.log("ingen løsning");
+            return null;
+        } else if (rot === 0) {
+            console.log("en løsning");
+            return -b / (2*a);
+        } else {
+            console.log("to løsninger");
+            var x1 = (-b + rot) / (2*a);
+            var x2 = (-b - rot) / (2*a);
+            return [x1, x2];
+        }
+    }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

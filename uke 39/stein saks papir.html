@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SSP</title>
+</head>
+<body>
+<h1>Stein, Saks eller Papir?</h1>
+<input id="inpFelt" type="text">
+<button id="btn" >Fight!</button>
+<p id="p"></p>
+
+<script>
+    var inpFelt = document.getElementById("inpFelt");
+    var btn = document.getElementById("btn");
+
+    var cpu = Math.round(Math.random()*2 + 1);
+
+
+
+/*
+    btnRegnUt.onclick = function () {
+        spnResultat.innerHTML = Number(andreTall.value) + Number(inpTall.value);
+    };
+*/
+    btn.onclick = function () {
+        if (cpu === 3){
+            document.write("<p> Motstander valgte Papir. </p>");
+            document.write("Du valgte " + inpFelt + ".");
+        } else if (cpu === 2) {
+            document.write("<p> Motstander valgte Saks. </p>");
+            document.write("Du valgte " + inpFelt + ".");
+
+        } else {
+            document.write("<p> Motstander valgte Stein. </p>");
+            document.write("Du valgte " + inpFelt + ".");
+        }
+    };
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

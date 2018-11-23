@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spill</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            text-align: center;
+
+        }
+
+        div > p {
+
+            bottom: 290px;
+
+            font-size: 40px;
+        }
+
+
+        h1  {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .btn    {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        p   {
+            text-align: center;
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Hvilket instrument er dette?</h1>
+    <div class="grid">
+        <div id="blokkfløyte">
+            <img height="200" width="200" src="Blåse/Blokk.jpg" alt="Blokkfløyte">
+            <p>Blokkfløyte</p>
+        </div>
+        <div id="fagott">
+            <img height="200" width="200" src="Blåse/Fagott.jpg" alt="Fagott">
+            <p>Fagott</p>
+        </div>
+        <div id="klarinett">
+            <img height="200" width="200" src="Blåse/klar.jpg" alt="Klarinett">
+            <p>Klarinett</p>
+        </div>
+        <div id="panfløyte">
+            <img height="200" width="200" src="Blåse/Pan.Jpeg" alt="Panfløyte">
+            <p>Panfløyte</p>
+        </div>
+        <div id="saksofon">
+            <img height="200" width="200" src="Blåse/Saks.jpg" alt="Saksofon">
+            <p>Saksofon</p>
+        </div>
+    </div>
+
+    <p id="p"></p>
+
+    <audio id="lyd" src="Lyder/blokkfløyte.mp3"></audio>
+    <audio id="resp" src="Lyder/riktig.mp3"></audio>
+    <div class="btn">
+        <div></div>
+        <div></div>
+        <button id="btn">Tilfeldig lyd!</button>
+        <button id="btnNy">Spill lyd igjen</button>
+        <div></div>
+        <div></div>
+    </div>
+
+
+    <script>
+        const blokkfløyte = document.getElementById("blokkfløyte");
+        const fagott = document.getElementById("fagott");
+        const klarinett = document.getElementById("klarinett");
+        const panfløyte = document.getElementById("panfløyte");
+        const saksofon = document.getElementById("saksofon");
+
+        const btn = document.getElementById("btn");
+        const btnNy = document.getElementById("btnNy");
+
+        let lyd = document.getElementById("lyd");
+        let resp = document.getElementById("resp");
+
+        let lydListe = ["Lyder/blokkfløyte.mp3", "Lyder/Fagott.mp3", "Lyder/klarinett.mp3", "Lyder/Panfløyte.mp3", "Lyder/Sax.mp3"];
+
+        let rndm = Math.floor(Math.random()*lydListe.length);
+
+        btn.onclick = function () {
+            rndm = Math.floor(Math.random()*lydListe.length);
+            lyd.src = lydListe[rndm];
+            lyd.play()
+        };
+
+        btnNy.onclick = function () {
+            lyd.play()
+        };
+
+
+
+       blokkfløyte.onclick = function () {
+           if (rndm === 0) {
+               p.innerHTML = "Riktig!";
+               resp.src = "Lyder/riktig.mp3";
+               resp.play();
+
+           } else {
+               p.innerHTML = "Feil!";
+               resp.src = "Lyder/feil.mp3";
+               resp.play();
+           }
+       };
+
+        fagott.onclick = function () {
+            if (rndm === 2) {
+                p.innerHTML = "Riktig!";
+                resp.src = "Lyder/riktig.mp3";
+                resp.play();
+            } else {
+                p.innerHTML = "Feil!";
+                resp.src = "Lyder/feil.mp3";
+                resp.play();
+            }
+        };
+
+        klarinett.onclick = function () {
+            if (rndm === 2) {
+                p.innerHTML = "Riktig!";
+                resp.src = "Lyder/riktig.mp3";
+                resp.play();
+            } else {
+                p.innerHTML = "Feil!";
+                resp.src = "Lyder/feil.mp3";
+                resp.play();
+            }
+        };
+
+        panfløyte.onclick = function () {
+            if (rndm === 3) {
+                p.innerHTML = "Riktig!";
+                resp.src = "Lyder/riktig.mp3";
+                resp.play();
+            } else {
+                p.innerHTML = "Feil!";
+                resp.src = "Lyder/feil.mp3";
+                resp.play();
+            }
+        };
+
+        saksofon.onclick = function () {
+            if (rndm === 4) {
+                p.innerHTML = "Riktig!";
+                resp.src = "Lyder/riktig.mp3";
+                resp.play();
+            } else {
+                p.innerHTML = "Feil!";
+                resp.src = "Lyder/feil.mp3";
+                resp.play();
+            }
+        };
+
+    </script>
+
+</body>
+</html>

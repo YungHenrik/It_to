@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #canvas {
+        border-style: solid;
+    }
+</style>
+
+<body>
+
+<p>hei på dag din gamle jøk</p>
+<canvas id="canvas" height="500"    width="500"> </canvas>
+
+<script>
+    /*
+
+    navnSkriver(); //utøver funskjonen//
+    navnSkriver();
+    navnSkriver();
+
+
+    function navnSkriver (){ //funksjonen//
+        document.write("Henrik") //skriver navnet henrik//
+    }
+
+    skrift(); //utøver funskjonen//
+
+    function skrift() { //funksjonen//
+        document.body.style.backgroundColor = "red"; //Kode som endrer bakgrunnsfarge//
+        document.body.style.fontSize = 100 + "px" //Kode som endrer fontstørrelse//
+
+    }
+
+
+    */
+
+    // Det er hensiktsmessig å bruke funskjoner i programmer, eller som en respons til f.eks et tastetrykk. //
+
+
+
+
+
+
+
+
+/*
+    const canvas = document.getElementById("canvas");   
+    const ctx = canvas.getContext("2d");
+
+     var x = 250;
+     var y = 250;
+
+      tegnSirkel();
+      flyttX();
+      flyttY();
+      tegnSirkel();
+       flyttX();
+       flyttY();
+       tegnSirkel();
+       
+
+
+
+     function tegnSirkel() {
+        ctx.beginPath();
+        ctx.arc(x, y, 25, 0, Math.PI*2);
+        ctx.fill();
+    }
+
+    function flyttX() {
+        x = x + 50;
+    }
+    function flyttY() {
+        y = y + 50
+    }
+
+   */
+
+
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    var x = 100;
+    var y = 100;
+
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttY();
+    flyttXTilbake();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttY();
+    flyttXTilbake();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttY();
+    flyttXTilbake();
+    tegnSirkel();
+        flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+    flyttX();
+    tegnSirkel();
+
+
+
+
+    function tegnSirkel() {
+        ctx.beginPath();
+        ctx.arc(x, y, 25, 0, Math.PI*2);
+        ctx.fill();
+    }
+
+    function flyttX() {
+        x = x + 100;
+    }
+    function flyttY() {
+        y = y + 100
+    }
+
+    function flyttXTilbake() {
+        x = x - 300
+    }
+
+
+</script>
+
+</body>
+</html>

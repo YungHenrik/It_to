@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+
+    <h1>
+        Priser
+    </h1>
+
+    <script>
+
+        var pris = Number(prompt("skriv inn pris uten moms her"));
+        document.write(`<p> Pris uten moms: ${pris}kr </p>`);
+        const moms = 1.25;
+        var medMoms = (pris*moms);
+        document.write(`<p> Pris med moms: ${medMoms.toFixed(2)}kr </p>`)
+
+
+    </script>
+
+</body>
+</html>

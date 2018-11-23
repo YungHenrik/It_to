@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sirkel</title>
+    <style>
+
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-image: url("Its-Always-Sunny-In-Philadelphia-920x584.png");
+            background-size: cover;
+        }
+
+        #sirkel {
+            background-color: white;
+            height: 450px;
+            width: 450px;
+            border-style: solid;
+            border-radius: 450px;
+            transition: .1s;
+            background-image: url("Its-Always-Sunny-In-Philadelphia-920x584 kopi.png");
+            background-size: cover;
+        }
+
+        </style>
+</head>
+<body>
+
+    <main>
+        <div id="sirkel"></div>
+    </main>
+    <a href=""></a>
+
+
+    <script>
+        let x = 0;
+        let y = 0;
+
+        const sirkel = document.getElementById("sirkel");
+
+        window.onkeydown = function (event) {
+            if (event.code==="ArrowUp"){
+                opp()
+            } else if (event.code === "ArrowDown")  {
+                ned()
+            } else if (event.code === "ArrowRight"){
+                hoyre()
+            } else if (event.code === "ArrowLeft") {
+                venstre()
+            }
+        };
+
+        function hoyre() {
+            x = x + 5;
+            sirkel.style.marginLeft = x + "px";
+        }
+
+        function venstre() {
+            x = x - 5;
+            sirkel.style.marginLeft = x + "px";
+        }
+        function opp() {
+            y = y - 5;
+            sirkel.style.marginTop = y + "px";
+        }
+        function ned() {
+            y = y + 5;
+            sirkel.style.marginTop = y + "px";
+        }
+
+
+
+    </script>
+
+</body>
+</html>

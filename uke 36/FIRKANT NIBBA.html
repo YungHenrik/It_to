@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FIRKANT NIBBA</title>
+    <style>
+        *   {
+            margin: 0;
+        }
+
+        #minFirkant {
+            background-color: red;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant2 {
+            background-color: orange;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant3 {
+            background-color: yellow;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant4 {
+            background-color: green;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant5 {
+            background-color: blue;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant6 {
+            background-color: rebeccapurple;
+            width: 200px;
+            height: 100px;
+        }
+
+        #minFirkant7 {
+            background-color: palevioletred;
+            width: 200px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <input id="inpStor" type="range">
+
+    <div id="minFirkant"></div>
+    <div id="minFirkant2"></div>
+    <div id="minFirkant3"></div>
+    <div id="minFirkant4"></div>
+    <div id="minFirkant5"></div>
+    <div id="minFirkant6"></div>
+    <div id="minFirkant7"></div>
+
+    <script>
+      var inpStor = document.getElementById("inpStor");
+      var inpStor2 = document.getElementById("inpStor2");
+      var inpStor3 = document.getElementById("inpStor3");
+      var inpStor4 = document.getElementById("inpStor4");
+      var inpStor5 = document.getElementById("inpStor5");
+      var inpStor6 = document.getElementById("inpStor6");
+      var inpStor7 = document.getElementById("inpStor7");
+
+      var minFirkant = document.getElementById("minFirkant");
+
+      inpStor.onmousemove = function () {
+          minFirkant.style.width = inpStor.value +"%";
+          minFirkant2.style.width = inpStor.value +"%";
+          minFirkant3.style.width = inpStor.value +"%";
+          minFirkant4.style.width = inpStor.value +"%";
+          minFirkant5.style.width = inpStor.value +"%";
+          minFirkant6.style.width = inpStor.value +"%";
+          minFirkant7.style.width = inpStor.value +"%";
+      }
+    </script>
+
+</body>
+</html>

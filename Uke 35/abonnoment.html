@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PrisRegner</title>
+</head>
+<body>
+
+    <h1>Hva koster ditt abonnoment?</h1>
+
+    <script>
+        var datamengde = Number(prompt("Datamengde i GB:"));
+        var antSamtaler = Number(prompt("Antall Samtaler:"));
+        var ringetid = Number(prompt("Ringetid i minutter:"));
+        var antSMS = Number(prompt("Antall SMS sendt:"));
+        var antMMS = Number(prompt("Antall MMS sendt:"));
+        var totalPris = (datamengde*10)+(antSamtaler*0.89)+(ringetid*0.39)+(antSMS*0.69)+(antMMS*1.99);
+
+        document.write(`<p>Datamengde i GB: ${datamengde}</p>`);
+        document.write(`<p>Antall Samtaler: ${antSamtaler}</p>`);
+        document.write(`<p>Ringetid i minutter: ${ringetid}</p>`);
+        document.write(`<p>Antall SMS ${antSMS}</p>`);
+        document.write(`<p>Antall MMS: ${antMMS}</p>`);
+        document.write(`<p>Total pris: ${totalPris.toFixed(2)}kr</p>`);
+
+
+
+    </script>
+
+</body>
+</html>

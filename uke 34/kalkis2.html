@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kalkulator</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div><a href="kalkis.html">Fahrenheit til Celcius</a></div>
+        <div><a href="kalkis2.html">Celsius til Fahrenheit</a></div>
+    </nav>
+</header>
+
+<h1>
+    Termometer-kalkulator
+</h1>
+
+<script>
+    var celsius  = prompt("Temperatur i celsius:");
+    var fahrenheit = (celsius * 1.8) + 32;
+    console.log(celsius);
+    document.write(`${celsius} grader i celsius er ${fahrenheit.toFixed(2)} grader i fahrenheit.`);
+
+
+
+</script>
+
+</body>
+</html>

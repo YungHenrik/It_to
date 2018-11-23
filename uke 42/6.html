@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<body>
+
+<h1>Gjett tallet!</h1>
+<p>(hint: det er fra 1 - 100)</p>
+<input id="inp" type="number">
+<button id="btn">Gjett!</button>
+<p id="svar"></p>
+
+
+<script>
+    var x = Math.round(Math.random()*99 + 1);
+    var inp = document.getElementById("inp");
+    var btn = document.getElementById("btn");
+
+    btn.onclick = function () {
+        if (inp.value < x) {
+            svar.innerHTML = "Tallet er høyere!";
+        } else if (inp.value > x) {
+            svar.innerHTML = "Tallet er lavere!";
+        } else {
+            svar.innerHTML = "Riktig!";
+            document.body.style.backgroundImage = "url('https://media.giphy.com/media/UZzuqeBeRcD3W/giphy.gif')"
+        }
+    }
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

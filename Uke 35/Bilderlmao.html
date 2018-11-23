@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bilder</title>
+</head>
+<body>
+    <h1>
+        Kule bilder!
+    </h1>
+
+    <form name="imageForm">
+        <table border=3>
+            <tr>
+                <td>
+                    <input onclick="displayImage();" type=button value="Display Random Image">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="blank.jpg" name="canvas" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+
+        var bilderArray = ["54c267c8f3eded04451f15dd.jpg", "C-658VsXoAo3ovC.jpg", "marvels-spider-man-screen-02-ps4-us-29mar18.jpg"];
+
+        function displayImage ()
+
+        {
+            var num = Math.floor(Math.random() * (imagesArray.length+1)); // 0...6
+            document.getElementById (bilderArray [num]);
+        }
+
+    </script>
+
+</body>
+</html>
+

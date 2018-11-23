@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>JS tegning</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="4000" height="301"></canvas>
+
+    <script>
+
+        var myCanvas = document.getElementById("myCanvas");
+        var ctx = myCanvas.getContext("2d");
+
+
+        ctx.strokeStyle = "blue";
+        ctx.moveTo(180,60);
+        ctx.lineTo(480, 600);
+        ctx.stroke();
+        ctx.moveTo(30,600);
+        ctx.lineTo(300,60);
+        ctx.stroke();
+        ctx.moveTo(400,60);
+        ctx.lineTo(400,600);
+        ctx.stroke();
+        ctx.moveTo(400,60);
+        ctx.lineTo(500,60);
+        ctx.stroke();
+        ctx.moveTo(400,300);
+        ctx.lineTo(500,300);
+        ctx.stroke();
+        ctx.moveTo(500,300);
+        ctx.lineTo(550,250);
+        ctx.stroke();
+        ctx.moveTo(500,60);
+        ctx.lineTo(550,90);
+        ctx.stroke();
+        ctx.moveTo(550,90);
+        ctx.lineTo(550,250);
+        ctx.stroke();
+
+    </script>
+
+</body>
+</html>

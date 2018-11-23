@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>wow xd</title>
+    <style>
+        #firkant {
+            height: 300px;
+            width: 300px;
+            font-size: 40px;
+            border-radius: 50%;
+
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+
+<img id="firkant" src="41117006_346626485880560_3477206862871396352_n.jpg"></img>
+
+<div>
+
+</div>
+
+
+<script>
+    var firkant = document.getElementById("firkant");
+
+
+    document.onmousemove = function () {
+        var x = event.clientX - 150;
+        var y = event.clientY - 150;
+        console.log("x=" + x);
+        console.log("y=" + y);
+
+        firkant.style.marginLeft = x + "px";
+        firkant.style.marginTop = y + "px";
+
+        if (x < 720){
+            document.body.style.backgroundImage = "url('pexels-photo-531880.jpeg')"
+        } else {
+            document.body.style.backgroundImage = "url('lol.jpeg')"
+        }
+
+    };
+
+
+
+
+</script>
+
+</body>
+</html>

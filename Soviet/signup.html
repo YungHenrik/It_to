@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soviet Army</title>
+    <style>
+        *   {
+            margin: 0;
+        }
+
+        body    {
+
+            background-size: cover;
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            background-color: red;
+            height: 8vh;
+            border-style: solid;
+            border-color: #ffd310;
+            text-align: center;
+
+        }
+
+        .aText    {
+            text-decoration: none;
+            color: #ffd310;
+            font-size: 25px;
+            margin-top: 2vh;
+
+        }
+
+        .aImg {
+            margin: 0;
+        }
+
+        .wrapper    {
+            background-size: cover;
+            height: 80vh;
+            width: 60rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        footer {
+            background-color: red;
+            height: 8vh;
+            border-style: solid;
+            border-color: #ffd310;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .footwrap   {
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+        }
+
+        .fText  {
+            text-decoration: none;
+            color: #ffd310;
+            font-size: 25px;
+            margin-top: 2vh;
+        }
+
+        .fTool  {
+            text-align: center;
+        }
+
+        .tools  {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a class="aImg" href="index.html"><img height="50px" src="logo/commie.png" alt=""></a>
+        <a class="aText" href="news.html">News</a>
+        <a class="aText" href="signup.html">Join Now</a>
+        <a class="aText" href="slav.html">Slav-Quiz</a>
+        <a class="aText" href="bomber.html">Capitalist Slayer</a>
+    </div>
+</header>
+
+<main>
+    <div class="wrapper">
+            <h1>Join the Army</h1>
+            <div id="antall">
+                <h3>Army size:</h3>
+                <div id="divTeller">0</div>
+            </div>
+            <div id="skjema">
+                <h3>Registrer deg her</h3>
+                <div id="knapper">
+                    <input type="checkbox" id="medFolge">
+
+                </div>
+                <button id="registrer">Registrer</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<div class="footwrap">
+
+    <footer>
+        <div class="tools">
+aaaa
+        </div>
+    </footer>
+
+</div>
+
+
+
+<script>
+    const divTeller = document.getElementById("divTeller");
+    const medFolge = document.getElementById("medFolge");
+    const registrer = document.getElementById("registrer");
+    let antall = 0; // En global variabel for antall påmeldte
+    registrer.onclick = function(){ // En funksjon som kjører når en bruker trykker på registrer-knappen
+        antall += 1; // Pluss en på antall
+        if(medFolge.checked){ // Hvis med følge er huket av gjør følgende:
+            antall +=1; // Pluss enda en på antall
+        }
+        divTeller.innerHTML = antall; // Bytt innholdet i divTeller med det nye antallet
+    }
+</script>
+
+</body>
+</html>

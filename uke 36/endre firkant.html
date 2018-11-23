@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endre Firkant</title>
+    <style>
+        *   {
+            margin: 0;
+            align-content: center;
+        }
+
+        #minFirkant    {
+            width: 100px;
+            height: 100px;
+            background-color: gray;
+            border-radius: 25px;
+            box-shadow: black 10px 10px 5px;
+
+
+        }
+    </style>
+</head>
+<body>
+    <span>Farge:</span>
+    <input id="inpFarge" type="text">
+    <span>Bredde:</span>
+    <input id="inpBredde" type="range">
+    <span>Høyde:</span>
+    <input id="inpHøyde" type="range">
+    <span>Skygge:</span>
+    <input id="inpSkygge" type="range">
+    <span>Hjørner:</span>
+    <input id="inpHjorner" type="text">
+    <span>Border:</span>
+    <input id="inpBorder" type="text">
+
+    <div id="minFirkant"></div>
+
+    <script>
+
+        var inpFarge = document.getElementById("inpFarge");
+        var inpBredde = document.getElementById("inpBredde");
+        var inpHoyde = document.getElementById("inpHøyde");
+        var inpSkygge = document.getElementById("inpSkygge");
+        var inpHjorner = document.getElementById("inpHjorner");
+        var inpBorder = document.getElementById("inpBorder");
+
+
+
+        inpBredde.onmousemove = function () {
+            minFirkant.style.width = inpBredde.value + "%";
+        };
+        inpHoyde.onmousemove = function () {
+            minFirkant.style.height = inpHoyde.value + "vh";
+        };
+        inpSkygge.onmousemove = function () {
+            minFirkant.style.boxShadow = inpSkygge.value
+        }
+
+    </script>
+
+
+
+</body>
+</html>

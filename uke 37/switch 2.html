@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>møbil</title>
+
+</head>
+<body>
+
+<input id="lmo" type="text">
+<button id="h">Hei</button>
+
+<script>
+    var lmo = document.getElementById("lmo");
+    var h = document.getElementById("h");
+    
+    h.onclick = function () {
+
+        switch (h.value) {
+            case "iPhone":
+                document.write("<h1>du har iPhone, den er sick</h1>");
+                document.body.style.backgroundImage = "url('https://cnet2.cbsistatic.com/img/L1xo2WtY8Jc2SKIQTJtXZRNkW-Y=/970x0/2017/10/31/a22348c2-6d9b-4c45-9b4d-e5e2d1ce0344/iphone-x-comparisons-01.jpg')";
+                document.body.style.backgroundSize = "cover";
+                break;
+            case "Samsung":
+                document.write("<h1>Dette er legit telefonen din</h1>");
+                document.body.style.backgroundImage = "url('http://cdn.shopify.com/s/files/1/1305/2183/products/Fake_Poop3_1024x1024.jpg?v=1527271644')";
+                document.body.style.backgroundSize = "cover";
+                break;
+            case "OnePlus":
+                document.write("<h1>du har OnePlus, den er sick</h1>");
+                document.body.style.backgroundImage = "url('https://c.slashgear.com/wp-content/uploads/2017/10/oneplus5red.jpg')";
+                document.body.style.backgroundSize = "cover";
+                break;
+            case "Google Pixel":
+                document.write("<h1>du har Google Pixel, den er sick</h1>");
+                document.body.style.backgroundImage = "url('https://icdn2.digitaltrends.com/image/google-pixel-review_4809-1500x1000.jpg?ver=1')";
+                document.body.style.backgroundSize = "cover";
+                break;
+            case "Huawei":
+                document.write("<h1>du har Huawei, den er sick</h1>");
+                document.body.style.backgroundImage = "url('https://i.ebayimg.com/images/g/M5YAAOSwaVRavVbq/s-l300.jpg')";
+                document.body.style.backgroundSize = "cover";
+                break;
+
+        }
+    }
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

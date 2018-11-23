@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>Enkel Kalkulator</title>
+</head>
+<body>
+
+    <h1>Enkel kalkolator med input felt</h1>
+    <div>
+        <input id="inpTall" type="Number">
+        <span>+</span>
+        <input id="andreTall" type="Number">
+        <span>=</span>
+        <span id="spnResultat"></span>
+        <br>
+        <button id="btnRegnUt">Regn Ut!</button>
+    </div>
+    <br>
+    <div>
+        <input id="inpTall2" type="Number">
+        <span>*</span>
+        <input id="andreTall2" type="Number">
+        <span>=</span>
+        <span id="spnResultat2"></span>
+        <br>
+        <button id="btnRegnUt2">Regn Ut!</button>
+    </div>
+
+    <script>
+
+        var inpTall = document.getElementById("inpTall");
+        var spnResultat = document.getElementById("spnResultat");
+        var btnRegnUt = document.getElementById("btnRegnUt");
+        var andreTall = document.getElementById("andreTall");
+        var inpTall2 = document.getElementById("inpTall2");
+        var spnResultat2 = document.getElementById("spnResultat2");
+        var btnRegnUt2 = document.getElementById("btnRegnUt2");
+        var andreTall2 = document.getElementById("andreTall2");
+
+
+        btnRegnUt.oncli ck = function () {
+            spnResultat.innerHTML = Number(andreTall.value) + Number(inpTall.value);
+        };
+        btnRegnUt2.onclick = function () {
+            spnResultat2.innerHTML = Number(andreTall2.value) * Number(inpTall2.value);
+        }
+
+
+    </script>
+
+</body>
+</html>

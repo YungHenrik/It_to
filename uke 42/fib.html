@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fib</title>
+</head>
+<body>
+<canvas id="canvas" height="6000" width="6000"></canvas>
+
+<script>
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    var tiTall = fibo(100);
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    document.body.style.margin = 0;
+
+    for (var j = tiTall.length - 1; j >= 0; j--) {
+
+        ctx.fillStyle = getRandomColor();
+        ctx.fillRect(0, 0, tiTall[j], tiTall[j]);
+
+    }
+
+
+
+    function fibo(n) {
+        var fib = [1, 1];
+
+        for (var i = 2; i < n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        return fib;
+    }
+
+
+
+
+
+    function getRandomColor() {
+        // ----- En funksjon som gir en tilfeldig farge ---
+        let letters = "0123456789ABCDEF"; // Alle tegn i en HEX-fargekode
+        let color = "#"; // En variabel for fargen, alle HEX-koder starter med #
+        for (let i = 0; i < 6; i++) { // En for-løkke som teller opp i fra 0 til 5
+            color += letters[Math.floor(Math.random() * letters.length)]; // Legg et tilfeldig tegn fra letters til i color
+        }
+        return color; // Returner fargen, eks: "#615C85"
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LANMA</title>
+</head>
+<body>
+<h1>Lan-Party!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</h1>
+
+<p id="antall"></p>
+<p id="varsel"> </p>
+
+<button id="addBtn" data-code="KeyF">+</button>
+<button id="subBtn" data-code="KeyF">-</button>
+
+
+<script>
+
+    //const btn = document.querySelector(`button[data-code=${event.code}]`);
+
+    const addBtn = document.getElementById("addBtn");
+    const subBtn = document.getElementById("subBtn");
+    const varsel = document.getElementById("varsel");
+
+    let antall = document.getElementById("antall");
+    let i = 0;
+
+    addBtn.onclick= add;
+    subBtn.onclick = sub;
+
+    window.onkeydown = function (event){
+        if (event.code === "ArrowLeft"){
+            add()
+        }else if (event.code === "ArrowRight"){
+            sub()
+        }
+    };
+
+
+
+    function add() {
+        i++;
+        antall.innerHTML = i;
+        if (i >= 55 && i < 60) {
+            varsel.innerHTML = "Det nærmer seg 60 personer, det er nå " + i + " personer!";
+        } else if (i>=60){
+            varsel.innerHTML = "Nå er det " + i + " personer! GYSMALEN STAPPER EVIG!!!"
+        }
+
+
+    };
+
+    function sub () {
+        i--;
+        antall.innerHTML = i;
+        if (i < 55) {
+            varsel.innerHTML = "";
+        } else if (i !== 60) {
+            varsel.innerHTML = "Det nærmer seg 60 personer, det er nå " + i + " personer!";
+        }
+
+    };
+
+    /*window.onkeyup = document.querySelector(`addBtn[data-code=${event.code}]`);{
+        console.log(code)
+    }
+    */
+
+
+
+
+
+</script>
+
+</body>
+</html>

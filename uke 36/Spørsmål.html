@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lmo</title>
+</head>
+<body>
+    <p>Er Mats Gay?</p>
+    <input id="spr1" type="text">
+    <button id="button" placeholder="srkive inn ditt svar">Send inn</button>
+    <div id="svar"></div>
+
+    <script>
+        var spr1 = document.getElementById("spr1");
+        var button = document.getElementById("button");
+        var svar = document.getElementById("svar");
+
+        button.onclick = function () {
+            if (spr1.value === "ja" || spr1.value === "Ja" ){
+                svar.innerText = "Gratuler du har riktig!";
+            } else {
+                svar.innerHTML = "Bro ærlig, bare se på han!";
+            }
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

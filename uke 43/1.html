@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>die</title>
+    <style>
+        *{
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<img id="bilder" src="bilde1.jpg" height="500" alt="">
+<br>
+<button id="btn1">Forrige</button>
+<button id="btn2">Neste</button>
+<button id="rndm">Tilfeldig</button>
+
+
+<script>
+
+    const forrige = document.getElementById("btn1");
+    const neste = document.getElementById("btn2");
+    const tilfeldig = document.getElementById("rndm");
+
+
+
+    const bilder = document.getElementById("bilder");
+
+    let bildeListe = ["bilde1.jpg", "bilde2.jpg", "bilde3.jpg", "bilde4.jpg", "bilde5.jpg"];
+
+    tilfeldig.onclick = function () {
+        bilder.src = bildeListe[Math.floor(Math.random()*bildeListe.length)];
+    };
+
+
+
+    let n = 0;
+    
+    neste.onclick = function () {
+        n++;
+        if (n<5) {
+            bilder.src = bildeListe[n];
+        } else {
+            n = 0;
+            bilder.src = bildeListe[n]
+        }
+
+    };
+
+    forrige.onclick = function () {
+        if (n>0) {
+            n--;
+            bilder.src = bildeListe[n];
+        }   else {
+            n=4;
+            bilder.src = bildeListe[n];
+        }
+
+    };
+
+
+
+
+
+</script>
+
+</body>
+</html>

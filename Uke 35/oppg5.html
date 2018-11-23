@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5lol</title>
+    <style>
+
+        img {
+            height: 500px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img id="bilde">
+
+    <script>
+        var imgBilde = document.getElementById("bilde");
+
+
+        var bildeArray = ["54c267c8f3eded04451f15dd.jpg", "C-658VsXoAo3ovC.jpg", "marvels-spider-man-screen-02-ps4-us-29mar18.jpg"];
+
+        imgBilde.src = bildeArray[Math.round(Math.random()*2)];
+
+
+
+    </script>
+
+
+</body>
+</html>

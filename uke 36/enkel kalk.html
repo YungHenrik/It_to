@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>Enkel Kalkulator</title>
+</head>
+<body>
+
+<h1>Enkel kalkolator med input felt</h1>
+<div>
+    <input id="inpTall" type="Number">
+    <button id="btnRegnUt">+</button>
+    <button id="btnRegnUt2">-</button>
+    <button id="btnRegnUt3">/</button>
+    <button id="btnRegnUt4">*</button>
+    <input id="andreTall" type="Number">
+    <span>=</span>
+    <span id="spnResultat"></span>
+    <br>
+</div>
+
+
+<br>
+
+
+<script>
+
+    var inpTall = document.getElementById("inpTall");
+    var spnResultat = document.getElementById("spnResultat");
+    var btnRegnUt = document.getElementById("btnRegnUt");
+    var andreTall = document.getElementById("andreTall");
+
+
+
+
+    btnRegnUt.onclick = function () {
+        spnResultat.innerHTML = Number(andreTall.value) + Number(inpTall.value);
+    };
+    btnRegnUt2.onclick = function () {
+        spnResultat.innerHTML = Number(andreTall.value) - Number(inpTall.value);
+    };
+    btnRegnUt3.onclick = function () {
+        spnResultat.innerHTML = Number(andreTall.value) / Number(inpTall.value);
+    };
+    btnRegnUt4.onclick = function () {
+        spnResultat.innerHTML = Number(andreTall.value) * Number(inpTall.value);
+    };
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <title>Soviet Army</title>
+    <style>
+        *   {
+            margin: 0;
+        }
+
+        body    {
+            background-image: url("Bilder/Bilde1.jpg");
+            background-size: cover;
+            -webkit-transition: background-image 0.2s ease-in-out;
+        }
+
+        #overskrift {
+           position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+        }
+
+       #overskrift >    h1  {
+           font-size: 120px;
+           text-align: center;
+           color: red;
+           opacity: .7;
+           -webkit-text-stroke: 3px white;
+       }
+
+        .rBtn   {
+            position: absolute;
+            top: 40%;
+            transform: translate(0, -50%);
+            right: 0%;
+            background-color: red;
+            opacity: .7;
+            height: 15vh;
+            border: solid 3px white;
+            width: 2%;
+        }
+
+        .vBtn   {
+            position: absolute;
+            top: 40%;
+            transform: translate(0, -50%);
+            background-color: red;
+            opacity: .7;
+            height: 15vh;
+            border: solid 3px white;
+            width: 2%;
+        }
+
+        .vBtn > p  {
+            font-size: 40px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .rBtn > p  {
+            font-size: 40px;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .wrapper {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(4, 1fr);
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: 30%;
+
+            
+        }
+
+        .undertekst {
+            text-align: center;
+            color: white;
+            font-size: 20px;
+        }
+
+
+
+        .sBilde {
+            text-align: center;
+        }
+
+        .sBilde > img   {
+            height: 70px;
+        }
+
+        a   {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="index.html"></a>
+
+        <div id="overskrift">
+            <h1>SOVIET-ARMY.ORG</h1>
+        </div>
+
+        <div class="knapper">
+            <div class="rBtn" id="rBtn">
+                <p>></p>
+            </div>
+            <div class="vBtn" id="vBtn">
+                <p><</p>
+            </div>
+        </div>
+
+        <div class="wrapper">
+           <div id="link1">
+               <a href="news.html">
+                   <div class="sBilde"><img src="logo/580b57fcd9996e24bc43c543.png" alt=""></div>
+                   <div class="undertekst">RUSKI NEWS</div>
+               </a>
+
+           </div>
+           <div id="link2">
+               <a href="signup.html">
+                   <div class="sBilde"><img src="logo/Android_O_Preview_Logo.png" alt=""></div>
+                   <div class="undertekst">JOIN ARMY</div>
+               </a>
+           </div>
+           <div id="link3">
+               <a href="slav.html">
+                   <div class="sBilde"><img src="logo/Burger_King_Logo.svg.png" alt=""></div>
+                   <div class="undertekst">SLAV-QUIZ</div>
+               </a>
+
+           </div>
+           <div id="link4">
+               <a href="bomber.html">
+                   <div class="sBilde"><img src="Bombas/Tsar.png" alt=""></div>
+                   <div class="undertekst">Capitalist Slayer</div>
+               </a>
+
+           </div>
+        </div>
+
+
+        <script src="index.js"></script>
+</body>
+</html>

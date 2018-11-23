@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javaerlit</title>
+</head>
+<body>
+
+    <h1>Esketit</h1>
+    <p id="Natur">Her kommer noe skrevet med java</p>
+    <p id="dinSetning">esketit</p>
+
+    <script>
+        var parMittAvsnitt = document.getElementById("Natur");
+        parMittAvsnitt.innerHTML = "<p>Denne teksten er laget av JS.</p> ";
+        parMittAvsnitt.innerHTML += "<p> Hva skjer mann? </p>";
+
+        var setning = prompt("Hvorfor er ikke jorda flat?");
+        var parDinSetning = document.getElementById("dinSetning");
+        parDinSetning.innerHTML = (`${setning}`)
+
+
+    </script>
+
+</body>
+</html>
