@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soviet Army</title>
+    <style>
+        *   {
+            margin: 0;
+        }
+
+        body    {
+            background-image: url("http://i.imgur.com/V30pJxT.jpg");
+            background-size: cover;
+        }
+
+        .navbar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: red;
+            height: 8vh;
+            border-style: solid;
+            border-color: #ffd310;
+            text-align: center;
+
+        }
+
+        .aText    {
+            text-decoration: none;
+            color: #ffd310;
+            font-size: 25px;
+            margin-top: 2vh;
+
+        }
+
+        .aImg {
+            margin: 0;
+        }
+
+        .wrapper    {
+            margin-top: 130px;
+            background-size: 100%;
+            height: 80vh;
+            width: 50rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        footer {
+            background-color: red;
+            height: 20vh;
+            border-style: solid;
+            border-color: #ffd310;
+            text-align: center;
+            overflow: hidden;
+
+        }
+
+        .footwrap   {
+            position: absolute;
+            bottom: 0%;
+            width: 100%;
+        }
+
+        .fText  {
+            text-decoration: none;
+            color: #ffd310;
+            font-size: 25px;
+            margin-top: 2vh;
+        }
+
+        .fTool  {
+            text-align: center;
+        }
+
+        .tools  {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            text-align: center;
+        }
+
+        #ja {
+            font-size: 60px;
+            color: #ffd310;
+        }
+
+        #nei    {
+            font-size: 60px;
+            color: #ffd310;
+        }
+
+        #play    {
+            font-size: 40px;
+            color: #ffd310;
+        }
+
+        #knapp  {
+            color: #ffd310;
+        }
+
+        p  {
+            line-height: 20px;
+        }
+
+        .boks    {
+            border-right: #ffd310 solid 2px;
+            border-left: #ffd310 solid 2px;
+            padding: 44px;
+        }
+
+        #Poeng  {
+            margin-top: 10px;
+            font-size: 40px;
+            color: #ffd310;
+            opacity: 1;
+            -webkit-text-stroke: 1px red;
+            text-align: center;
+
+        }
+
+        h1  {
+            font-size: 80px;
+            color: #ffd310;
+            -webkit-text-stroke: 2px red;
+            text-align: center;
+        }
+
+        #react  {
+            font-size: 40px;
+            color: #ffd310;
+            opacity: 1;
+            -webkit-text-stroke: 1px red;
+            text-align: center;
+            margin-top: 350px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a class="aImg" href="index.html"><img height="50px" src="logo/commie.png" alt=""></a>
+        <a class="aText" href="signup.html">Join Now</a>
+        <a class="aText" href="slav.html">Soviet Lottery</a>
+        <a class="aText" href="bomber.html">Capitalist Slayer</a>
+    </div>
+</header>
+
+<main>
+    <h1>Soviet Lottery!</h1>
+
+    <div class="wrapper" id="wrapper">
+
+    </div>
+
+    <p id="Poeng"></p>
+    <p id="react">React:</p>
+</main>
+
+<div class="footwrap">
+
+    <footer>
+        <div class="tools">
+            <div class="boks">
+                <p id="ja" data-code="KeyA">да</p>
+                <br>
+                <p id="knapp">(a)</p>
+            </div>
+
+            <div class="boks">
+                <p id="play" data-code="KeyS">блять</p>
+                <br>
+                <p id="knapp">(s)</p>
+            </div>
+
+            <div class="boks">
+                <p id="nei" data-code="KeyD">Нет.</p>
+                <br>
+                <p id="knapp">(d)</p>
+            </div>
+        </div>
+    </footer>
+
+    <audio src="ruski%20taster/dah.mp3" data-code="KeyA"></audio>
+    <audio src="ruski%20taster/blyat.mp3" data-code="KeyS"></audio>
+    <audio src="ruski%20taster/nyet.mp3" data-code="KeyD"></audio>
+
+
+</div>
+
+
+<script>
+
+    window.onkeydown = function (event) {
+        const lyd = document.querySelector(`audio[data-code=${event.code}]`);
+
+        if (!lyd){
+            return;
+        }
+
+        lyd.currentTime = 0;
+        lyd.play();
+    };
+
+    let p  =  1;
+    let lodd = 10;
+    while (vinner!== 50){
+
+        var vinner = Math.floor(Math.random()*50+1);
+
+        if (vinner !== 50) {
+            document.getElementById("wrapper").innerHTML += "Cyka Blyat, ";
+            p++;
+        }else {
+            document.getElementById("wrapper").innerHTML += "You Won!";
+
+        }
+    }
+
+    let brukt = lodd * p;
+    let vinne = 400;
+    let gevinst = vinne - brukt;
+
+
+    document.getElementById("Poeng").innerHTML  = "You played a total of " + p + " Times." + " You have won " + gevinst + ".00" + " Soviet Rubels!";
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>

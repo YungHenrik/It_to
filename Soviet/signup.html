@@ -11,11 +11,12 @@
         body    {
 
             background-size: cover;
+            background-image: url("Bilder/army2.jpg");
         }
 
         .navbar {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             background-color: red;
             height: 8vh;
             border-style: solid;
@@ -37,13 +38,8 @@
         }
 
         .wrapper    {
-            background-size: cover;
-            height: 80vh;
-            width: 60rem;
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
+         text-align: center;
+            margin-top: 70px;
         }
 
         footer {
@@ -62,7 +58,7 @@
             width: 100%;
         }
 
-        .fText  {
+        fText  {
             text-decoration: none;
             color: #ffd310;
             font-size: 25px;
@@ -75,7 +71,48 @@
 
         .tools  {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(1, 1fr);
+            margin-top: 20px;
+        }
+
+        h3  {
+            font-size: 60px;
+            text-align: center;
+            color: red;
+
+            -webkit-text-stroke: 1.5px white;
+        }
+
+        h1  {
+            font-size: 120px;
+            text-align: center;
+            color: red;
+
+            -webkit-text-stroke: 3px white;
+        }
+        #divTeller  {
+            font-size: 40px;
+            color: white;
+            -webkit-text-stroke: 1px red;
+        }
+
+        p   {
+            font-size: 20px;
+
+            color: #ffd310;
+        }
+
+        #footText   {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #registrer  {
+            background-color: red;
+            color: #ffd310;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
         }
     </style>
 </head>
@@ -84,9 +121,8 @@
 <header>
     <div class="navbar">
         <a class="aImg" href="index.html"><img height="50px" src="logo/commie.png" alt=""></a>
-        <a class="aText" href="news.html">News</a>
         <a class="aText" href="signup.html">Join Now</a>
-        <a class="aText" href="slav.html">Slav-Quiz</a>
+        <a class="aText" href="slav.html">Soviet Lottery</a>
         <a class="aText" href="bomber.html">Capitalist Slayer</a>
     </div>
 </header>
@@ -96,25 +132,32 @@
             <h1>Join the Army</h1>
             <div id="antall">
                 <h3>Army size:</h3>
-                <div id="divTeller">0</div>
+                <div id="divTeller">6150000</div>
             </div>
             <div id="skjema">
-                <h3>Registrer deg her</h3>
+                <h3>Register here:</h3>
                 <div id="knapper">
-                    <input type="checkbox" id="medFolge">
+                    <p id="medFolge">Bring a friend</p>
 
+                    <br>
+
+                    <button id="registrer">Sign Up</button>
                 </div>
-                <button id="registrer">Registrer</button>
+
             </div>
         </div>
     </div>
 </main>
 
+<audio id="nice" src="lyder/click-nice.mp3"></audio>
+<audio id="fuck" src="lyder/fuck.mp3"></audio>
+<audio id="anthem" src="lyder/anthem.mp3"></audio>
+
 <div class="footwrap">
 
     <footer>
         <div class="tools">
-aaaa
+            <p id="fText"></p>
         </div>
     </footer>
 
@@ -122,18 +165,52 @@ aaaa
 
 
 
+
 <script>
     const divTeller = document.getElementById("divTeller");
     const medFolge = document.getElementById("medFolge");
     const registrer = document.getElementById("registrer");
-    let antall = 0; // En global variabel for antall påmeldte
+    const nice = document.getElementById("nice");
+    const fuck = document.getElementById("fuck");
+    const anthem = document.getElementById("anthem");
+    const fText = document.getElementById("fText");
+    let antall = 6150000; // En global variabel for antall påmeldte
+    let a = 0;
+
+
+
+
     registrer.onclick = function(){ // En funksjon som kjører når en bruker trykker på registrer-knappen
         antall += 1; // Pluss en på antall
         if(medFolge.checked){ // Hvis med følge er huket av gjør følgende:
             antall +=1; // Pluss enda en på antall
         }
+        document.body.style.backgroundImage =
+        document.getElementById("fText").innerHTML = "You are now obligated to fight for the motherland, unless you want to work in Gulag.";
+        anthem.play();
         divTeller.innerHTML = antall; // Bytt innholdet i divTeller med det nye antallet
-    }
+
+
+    };
+
+    medFolge.onclick    = function () {
+        if (a===1)  {
+            a--;
+            medFolge.checked = false;
+            medFolge.style.color = `#ffd310`;
+            fuck.play()
+
+        } else if (a===0) {
+            a++;
+            medFolge.checked = true;
+            medFolge.style.color = `red`;
+            nice.play();
+        }
+
+    };
+
+
+
 </script>
 
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb">
 <head>
     <meta charset="UTF-8">
     <title>Soviet Army</title>
@@ -9,13 +9,17 @@
         }
 
         body    {
-            background-image: url("bilder/Army.jpg");
+            background-image: url("https://i.ytimg.com/vi/QnrzS2xEoWg/maxresdefault.jpg");
             background-size: cover;
+
+
+
+
         }
 
         .navbar {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             background-color: red;
             height: 8vh;
             border-style: solid;
@@ -37,8 +41,8 @@
         }
 
         .wrapper    {
-            background-image: url("bilder/Amrikana.png");
-            background-size: cover;
+           text-align: center;
+            background-size: 80%;
             height: 80vh;
             width: 60rem;
             position: absolute;
@@ -78,6 +82,39 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
         }
+
+        #level  {
+            margin-top: 10px;
+            margin-left: 10px;
+            color: red;
+            font-size: 40px;
+            -webkit-text-stroke: .5px #ffd310;
+        }
+
+        #bilde  {
+            width: 80%;
+
+        }
+
+        #lmo {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 300px;
+            left: 350px;
+            z-index: 1;
+
+        }
+
+        #kenny  {
+            height: 500px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        #cursor {
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -85,16 +122,21 @@
             <header>
                 <div class="navbar">
                     <a class="aImg" href="index.html"><img height="50px" src="logo/commie.png" alt=""></a>
-                    <a class="aText" href="news.html">News</a>
-                    <a class="aText" href="signup.html">Join Now</a>
-                    <a class="aText" href="slav.html">Slav-Quiz</a>
+                    <a class="aText" href="signup.html">Join Army</a>
+                    <a class="aText" href="slav.html">Soviet Lottery</a>
                     <a class="aText" href="bomber.html">Capitalist Slayer</a>
                 </div>
             </header>
 
             <main>
-                <div class="wrapper">
+                <div class="wrapper" id="wrapper">
+                    <img id="bilde" src="Bilder/amerikum.png">
+                    <video id="kenny" src=""></video>
+                    <div id="lmo"></div>
                 </div>
+
+
+                <p id="level">Level: 0</p>
             </main>
 
             <div class="footwrap">
@@ -104,24 +146,118 @@
                         <div class="fText">
                             Weapons:
                         </div>
-                        <div class="fTool">
-                            <img height="50px" src="Bombas/Tsar.png" alt="">
-                        </div>
-                        <div class="fTool">
-                            <img height="50px" src="Bombas/Snipe.png" alt="">
-                        </div>
-                        <div class="fTool">
+
+                        <div class="fTool" id="level1">
                             <img height="50px" src="Bombas/Castro.png" alt="">
                         </div>
-                        <div class="fTool">
-                            <img height="50px" src="" alt="">
+                        <div class="fTool" id="level2">
+                            <img height="50px" src="Bombas/Snipe.png" alt="">
+                        </div>
+                        <div class="fTool" id="level3">
+                            <img height="50px" src="Bombas/Tsar.png" alt="">
                         </div>
                     </div>
                 </footer>
 
+
+
             </div>
 
+            <div>
+                <img src="cursor/Crosshair.cur" style="position: absolute" id="cursor" height="30px">
+            </div>
+
+            <audio id="cuba" src="lyder/cuba.mp3"></audio>
+
+            <script>
+
+                const level1 = document.getElementById("level1");
+                const level2 = document.getElementById("level2");
+                const level3 = document.getElementById("level3");
+                const cuba = document.getElementById("cuba");
+                const bilde = document.getElementById("bilde");
+                const kenny = document.getElementById("kenny");
+                const wrapper = document.getElementById("wrapper");
+                let lmo = document.getElementById("lmo");
+
+                let level = document.getElementById("level");
+                let a = 0;
+
+                level1.onclick = function () {
+                    a=1;
+                    document.getElementById("level").innerHTML = "Level: 1";
+                    document.getElementById("bilde").src = `Bilder/Cuba.png`;
+                    document.getElementById("kenny").src = ``;
 
 
+
+                };
+
+                level2.onclick = function () {
+                    a=2;
+                    document.getElementById("level").innerHTML = "Level: 2";
+                    document.getElementById("bilde").src = `Bilder/kenny.png`;
+                    document.getElementById("cuba").src = ``;
+
+
+
+                };
+
+                level3.onclick = function () {
+                    a=3;
+                    document.getElementById("level").innerHTML = "Level: 3";
+                    document.getElementById("bilde").src = ``;
+                    document.getElementById("kenny").src = `video/wtf.mp4`;
+                    document.getElementById("cursor").src = ``;
+                    document.getElementById("cuba").src = ``;
+                    kenny.play();
+
+
+
+                };
+
+                bilde.onclick = function () {
+                    if (a === 1) {
+                        document.getElementById("bilde").src = `https://upload.wikimedia.org/wikipedia/commons/a/a6/Flag_map_of_Cuba_%28Soviet_Union%29.png`;
+                        cuba.play();
+                    }
+                };
+
+                wrapper.onmousemove = function () {
+                    if (a === 2) {
+                        let cursor = document.getElementById("cursor");
+                        wrapper.onmousemove = applyCursor;
+                        document.getElementById("wrapper").style.cursor = none;
+                        function applyCursor(event) {
+                            cursor.style.left = event.clientX - (cursor.offsetWidth /2) + "px";
+                            cursor.style.top = event.clientY - (cursor.offsetHeight /2) + "px";
+                        }
+                    }
+                };
+
+                lmo.onclick = function () {
+                    document.getElementById("bilde").src = ``;
+                    document.getElementById("kenny").src = `video/ded.mp4`;
+                    kenny.play();
+                    document.getElementById("cursor").src = ``;
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </script>
 </body>
 </html>
