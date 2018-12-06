@@ -9,7 +9,7 @@
         }
 
         body    {
-            background-image: url("https://i.ytimg.com/vi/QnrzS2xEoWg/maxresdefault.jpg");
+            background-image: url("https://s3-media3.fl.yelpcdn.com/bphoto/utNFLAoQf9MUUNkXIIRzAg/o.jpg");
             background-size: cover;
 
 
@@ -136,7 +136,7 @@
                 </div>
 
 
-                <p id="level">Level: 0</p>
+                <p id="level">Step: 1</p>
             </main>
 
             <div class="footwrap">
@@ -185,7 +185,7 @@
 
                 level1.onclick = function () {
                     a=1;
-                    document.getElementById("level").innerHTML = "Level: 1";
+                    document.getElementById("level").innerHTML = "Step: 2";
                     document.getElementById("bilde").src = `Bilder/Cuba.png`;
                     document.getElementById("kenny").src = ``;
 
@@ -195,8 +195,9 @@
 
                 level2.onclick = function () {
                     a=2;
-                    document.getElementById("level").innerHTML = "Level: 2";
+                    document.getElementById("level").innerHTML = "Step: 3";
                     document.getElementById("bilde").src = `Bilder/kenny.png`;
+                    document.getElementById("cursor").src = `cursor/Crosshair.cur`;
                     document.getElementById("cuba").src = ``;
 
 
@@ -205,12 +206,13 @@
 
                 level3.onclick = function () {
                     a=3;
-                    document.getElementById("level").innerHTML = "Level: 3";
+                    document.getElementById("level").innerHTML = "Step: 4, Profit!";
                     document.getElementById("bilde").src = ``;
                     document.getElementById("kenny").src = `video/wtf.mp4`;
                     document.getElementById("cursor").src = ``;
                     document.getElementById("cuba").src = ``;
                     kenny.play();
+
 
 
 
